@@ -17,7 +17,29 @@ const List = () => {
 
     return(
         <div>
-
+            <h1>Board List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {list.map((list) => (
+                        <tr key={list.no}>
+                            <td>{list.no}</td>
+                            <td>{list.title}</td>
+                            <td>{list.writer}</td>
+                            <td>{list.writeDate}</td>
+                            <td>{list.hit}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }
