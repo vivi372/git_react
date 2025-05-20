@@ -6,33 +6,18 @@ import List from './board/list';
 import View from './board/view';
 import Write from './board/write';
 import Update from './board/update';
+import Header from './components/header';
+import Footer from './components/footer';
+import Body from './components/body';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={
-          <Main />
-        }>
-        </Route>
-        <Route path='/board/list' element={
-          <List />
-        }>
-        </Route>
-        <Route path='/board/view' element={
-          <View />
-        }>
-        </Route>
-        <Route path='/board/write' element={
-          <Write />
-        }>
-        </Route>
-        <Route path='/board/update' element={
-          <Update />
-        }>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+ 
   );
 }
 
